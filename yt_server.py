@@ -12,7 +12,7 @@ def download():
         return jsonify({"error": "URL manquante"}), 400
 
     try:
-        # Crée un fichier temporaire
+        # Crée un fichier temporaire d'abord
         filename = f"{uuid.uuid4()}.mp4"
         filepath = os.path.join("downloads", filename)
         os.makedirs("downloads", exist_ok=True)
